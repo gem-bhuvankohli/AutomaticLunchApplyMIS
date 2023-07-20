@@ -46,7 +46,7 @@ Here: https://github.com/gem-bhuvankohli/AutomaticLunchApplyMIS
 
 GitHub - gem-bhuvankohli
 
-Thank you,
+Thank you.
 
 Kind regards,
 Bhuvan Kohli
