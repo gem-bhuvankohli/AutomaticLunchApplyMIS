@@ -30,6 +30,7 @@ Future scope of improvements: 
 1. Can be made faster and efficient by integrating it with API automation.
 2. Can be made more user specific and friendly. For example, allowing user to enter specific date and location.
 3. Feature can be added where if a person applies for WFH, then that lunch for that date gets automatically deselected.             
+
       
 Hence, many redundant tasks on MIS can be avoided along with wastage of food can also be reduced
 by using this script. Although it does work fine and fulfills the automatic lunch apply feature, but it has
