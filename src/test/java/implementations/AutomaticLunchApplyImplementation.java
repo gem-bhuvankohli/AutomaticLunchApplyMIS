@@ -12,6 +12,9 @@ import java.time.Duration;
 public class AutomaticLunchApplyImplementation {
     static WebDriver driver = new ChromeDriver();
 
+    /**
+     * Opens the application and logs in.
+     */
     public static void openApplicationAndLogIn() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(Locators.baseUrl);
@@ -31,6 +34,9 @@ public class AutomaticLunchApplyImplementation {
         }
     }
 
+    /**
+     * Selects the option to apply for lunch.
+     */
     public static void selectToApplyForLunch() {
         try {
             WebElement applyDropdown = driver.findElement(Locators.applyDropdown);
@@ -44,6 +50,9 @@ public class AutomaticLunchApplyImplementation {
         }
     }
 
+    /**
+     * Selects lunch dates and location for applying.
+     */
     public static void selectLunchDatesAndLocation() {
         try {
             WebElement dateSelectDropdown = driver.findElement(Locators.dateSelectDropdown);
@@ -64,6 +73,9 @@ public class AutomaticLunchApplyImplementation {
         }
     }
 
+    /**
+     * Clicks the "Add" button for applying lunch.
+     */
     public static void clickAddButton() {
         try {
             WebElement addButton = driver.findElement(Locators.addButton);
@@ -74,6 +86,9 @@ public class AutomaticLunchApplyImplementation {
         }
     }
 
+    /**
+     * Verifies if lunch has been applied successfully.
+     */
     public static void verifyLunchAppliedSuccessfully() {
         boolean checkIfAdded = false;
 
@@ -93,12 +108,15 @@ public class AutomaticLunchApplyImplementation {
             if (checkIfAdded) {
                 Log.info("Lunch has already been applied for all dates!");
             } else {
-                Log.error("Script Encountered An Issue!\n\n" +
-                        "Kindly Re-run the script!\n\n" +
-                        "*Possible Reasons:\n" +
-                        "1. Slow compilation of script\n" +
-                        "2. Slow internet connection\n" +
-                        "Kindly check your system for the same and then re-run the script*");
+                Log.error("""
+                        Script Encountered An Issue!
+
+                        Kindly Re-run the script!
+
+                        *Possible Reasons:
+                        1. Slow compilation of script
+                        2. Slow internet connection
+                        Kindly check your system for the same and then re-run the script*""");
             }
         } finally {
             driver.close();
