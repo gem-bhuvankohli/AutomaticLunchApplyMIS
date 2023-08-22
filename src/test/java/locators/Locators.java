@@ -1,4 +1,4 @@
-package org.gemini;
+package locators;
 
 import org.openqa.selenium.By;
 
