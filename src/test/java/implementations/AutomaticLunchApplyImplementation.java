@@ -11,6 +11,7 @@ import java.time.Duration;
 
 public class AutomaticLunchApplyImplementation {
     static WebDriver driver = new ChromeDriver();
+    static boolean checkIfAdded = false;
 
     /**
      * Opens the application and logs in.
@@ -90,8 +91,6 @@ public class AutomaticLunchApplyImplementation {
      * Verifies if lunch has been applied successfully.
      */
     public static void verifyLunchAppliedSuccessfully() {
-        boolean checkIfAdded = false;
-
         try {
             WebElement okButton = driver.findElement(Locators.okButton);
             okButton.click();
